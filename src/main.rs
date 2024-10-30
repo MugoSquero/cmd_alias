@@ -3,6 +3,7 @@ use std::fs;
 use std::io::{Read, Write};
 use std::process::Command;
 use std::path::Path;
+use dirs;
 
 const CONFIG_PATH: &str = "cmd_alias";
 const CONFIG_NAME: &str = "aliases.cmd";
@@ -31,9 +32,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
         }
     };
 
-    let config_root = Path::new("C:\\Users\\E\\AppData\\Roaming");
+    let home_dir = dirs::home_dir().expect("Failed to get home directory");
 
-    let config_root = config_root.join(CONFIG_PATH);
+    let config_root = home_dir.join(CONFIG_PATH);
     let config_file = config_root.join(CONFIG_NAME);
     let _ = fs::create_dir_all(&config_root).unwrap();
 

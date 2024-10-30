@@ -6,3 +6,4 @@ authors = ["Einjerjar"]
 description = "Simple alias implementation for windows using doskey"
 
 [dependencies]
+dirs = "5.0"
