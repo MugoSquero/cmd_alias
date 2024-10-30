@@ -5,7 +5,7 @@ use std::process::Command;
 use std::path::Path;
 use dirs;
 
-const CONFIG_PATH: &str = "cmd_alias";
+const CONFIG_PATH: &str = "AppData\\Roaming\\cmd_alias";
 const CONFIG_NAME: &str = "aliases.cmd";
 
 fn main() -> Result<(), Box<dyn std::error::Error>>{
